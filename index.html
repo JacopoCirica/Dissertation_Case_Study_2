@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="fonts/sole_sans.css">
+    <link rel="stylesheet" href="css/tmp.css">
+    <link rel="stylesheet" href="css/calc-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="./js/calc-data.js"></script>
+    <script src="./js/calc-chart-plugins.js"></script>
+    <title>Calcolatore inflazione</title>
+</head>
+
+<body>
+    <div id="calcolatore_container">
+        <div class="box_inflazione desktop">
+            <div class="inflazione_utente">
+                La tua inflazione è:
+                <span></span>
+            </div>
+            <div class="inflazione_italia">
+                L'inflazione italiana è:
+                <span></span>
+            </div>
+        </div>
+
+        <div class="box_grafico">
+            <div class="grafico">
+                <canvas id="canvas"></canvas>
+            </div>
+
+        </div>
+
+
+        <div class="cards">
+            <div class="card">
+                <div class="card_menu_btn_transparent" onclick="toggleCard()"></div>
+                <div class="card_menu">
+                    <div class="card_occhiello">Auto</div>
+                    <div class="card_menu_list">
+                        <button data-card-id="0711" data-card-num="0" class="card_menu_active">1</button>
+                        <button data-card-id="0722" data-card-num="1" disabled>2</button>
+                        <button data-card-id="0733" data-card-num="2" disabled>3</button>
+                        <button data-card-id="112" data-card-num="3" disabled>4</button>
+                        <button data-card-id="04510" data-card-num="4" disabled>5</button>
+                        <button data-card-id="111" data-card-num="5" disabled>6</button>
+                        <button data-card-id="011" data-card-num="6" disabled>7</button>
+                    </div>
+                    <div class="card_menu_arrow">
+                        <img src="img/menu_arrow_up.svg" alt="Apri card" width="20" height="20">
+                    </div>
+                </div>
+                <div class="card_content">
+                    <div class="card_domanda">
+                        Hai acquistato un'auto nell'ultimo anno?
+                    </div>
+                    <div class="card_descrizione"></div>
+                    <div class="card_risposte_container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal_hide"></div>
+
+        <div class="box_inflazione mobile">
+            <div class="inflazione_utente">
+                La tua inflazione è:
+                <span></span>
+            </div>
+            <div class="inflazione_italia">
+                L'inflazione italiana è:
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var mobileWidth = window.matchMedia("(max-width: 480px)");
+    </script>
+
+    <script src="./js/calc-index.js"></script>
+    <script src="./js/calc-card.js"></script>
+    <script src="./js/calc-calculate.js"></script>
+    <script src="./js/calc-chart.js"></script>
+
+
+</body>
+
+</html>
