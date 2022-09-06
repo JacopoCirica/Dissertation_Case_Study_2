@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  transition: 0.3s all ease-out;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "SoleSans", Arial, Helvetica, sans-serif;
+  background-color: #fff8f0;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  color: #000;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+div {
+  width: 100%;
+}
+
+/* 
+    font-family: "SoleSans", Arial, Helvetica, sans-serif;
+    font-family: "sole_text", Georgia, Times, "Times New Roman", serif;
+    font-family: "sole_headline", Georgia, Times, "Times New Roman", Serif;
+    font-family: "sole_display", Georgia, Times, "Times New Roman", serif;
+    */

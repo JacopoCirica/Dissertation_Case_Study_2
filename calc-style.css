@@ -1,0 +1,402 @@
+/* .box_inflazione {
+} */
+
+#calcolatore_container {
+  width: 100%;
+  position: relative;
+}
+
+.inflazione_utente {
+  font-size: 36px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+}
+
+.inflazione_utente span {
+  font-weight: 600;
+}
+
+.inflazione_italia {
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #d9d3cc;
+}
+
+/* CARDS */
+
+.cards {
+  z-index: 50;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  width: 360px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  max-height: 560px;
+  overflow: hidden;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card_menu_btn_transparent {
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 5;
+}
+
+.card_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.card_menu_list {
+  /*   list-style-type: none; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  min-height: 26px;
+}
+
+.card_menu_list button {
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  width: 26px;
+  height: 26px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #d9d3cc;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+button.card_menu_hover:hover {
+  background-color: #4361ee;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.card_menu_active {
+  background-color: #4361ee;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card_menu_arrow {
+  text-align: right;
+  max-width: 20px;
+  margin-left: 5px;
+}
+
+.card_menu_arrow img {
+  text-align: center;
+  cursor: pointer;
+}
+
+.card_menu_arrow img:hover {
+  opacity: 0.7;
+}
+
+.card_menu_arrow_up {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.card_occhiello {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4361ee;
+  text-transform: uppercase;
+}
+
+.card_content {
+  height: 100%;
+  display: block;
+  visibility: visible;
+  padding: 20px 0;
+  background: #fff;
+}
+
+.display_none {
+  display: none;
+}
+
+.collapse {
+  opacity: 0;
+  visibility: collapse;
+  height: 0;
+}
+
+.card_domanda {
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.06;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.card_descrizione {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.card_legenda {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #d9d3cc;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.card_selettori {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card_checkbox {
+  width: fit-content;
+  padding: 8px 15px;
+  border-radius: 17.5px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.card_checkbox {
+  margin: 6px 8px 6px 0;
+}
+
+.card_checkbox:hover {
+  border-color: #4361ee;
+  color: #4361ee;
+  background-color: #fff;
+}
+
+.card_checkbox_selected {
+  background-color: #4361ee;
+  color: #fff;
+  font-weight: 500;
+}
+
+.card_checkbox_selected:hover {
+  background-color: #4361ee;
+  color: #fff;
+  font-weight: 500;
+}
+
+.card_conferma {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card_conferma button {
+  padding: 8px 14px 8px 15px;
+  border: none;
+  border-radius: 17.5px;
+  background-color: #000004;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card_conferma button:hover {
+  opacity: 0.7;
+}
+
+.card_errore {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #f00;
+  margin: 20px 0 0 0;
+  opacity: 0;
+}
+
+.card_011_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_011_row_selettori {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.no_border {
+  margin: 6px 0;
+  border: none;
+  box-shadow: none;
+}
+
+#card_risposte__04510 .card_selettori,
+#card_risposte__111 .card_selettori,
+.card_011_row_selettori {
+  border-radius: 17.5px;
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 30%);
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+#card_risposte__04510 .card_selettori div,
+#card_risposte__111 .card_selettori div,
+.card_011_row_selettori div {
+  margin: 0;
+}
+
+/* .not_clickable {
+  cursor: not-allowed;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 30%);
+  color: rgb(0 0 0 / 30%);
+  background-color: #fff;
+}
+
+.not_clickable:hover {
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 30%);
+  color: rgb(0 0 0 / 30%);
+  background-color: #fff;
+} */
+
+#card_checkbox_nessuna_auto {
+  margin: auto;
+}
+
+/* GRAFICO */
+
+.box_grafico {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 90vh;
+}
+
+.grafico {
+  position: relative; /* obbligatorio perché il canvas sia responsive */
+  width: 70%;
+  height: 60%;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  opacity: 0;
+}
+
+/* RESPONSIVE MOBILE */
+
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+
+  .inflazione_utente {
+    font-size: 26px;
+  }
+
+  .cards {
+    z-index: 50;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .card_domanda {
+    font-size: 22px;
+  }
+
+  .grafico {
+    position: relative; /* obbligatorio perché il canvas sia responsive */
+    width: 100%;
+    height: 90%;
+  }
+
+  .modal {
+    z-index: 25;
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .mobile {
+    display: none;
+  }
+}
